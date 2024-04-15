@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+html {
+    background-color: #1b1b1b;
+}
+
+body {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.background {
+    background-image: url('../images/PB.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.page-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.user-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.page-content a {
+    text-decoration: none;
+}
+
+.header-logo {
+    display: flex;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+.user-info {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-name {
+    margin-top: 8px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.user-account-name {
+    margin-top: 2px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.location-info {
+    margin-top: 40px;
+}
+
+#time-in-current-location {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.current-location {
+    display: flex;
+    margin-top: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+#location-name {
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.user-status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+.user-status::before {
+    display: none;
+    content: '';
+    position: absolute;
+    background-image: url("../images/status.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 10px;
+    height: 10px;
+    left: -15px;
+}
+
+.user-status.available::before {
+    display: block;
+}
+
+.separator {
+    background-image: url("../images/separator.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2px;
+    height: 19px;
+}
+
+.respond-time {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.clock {
+    content: '';
+    background-image: url(../images/clock.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 22px;
+    height: 22px;
+}
+
+.send-button {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    max-width: 390px;
+    width: 100%;
+    height: 56px;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 32px 16px 32px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #17AAE8;
+}
+
+.btn-text {
+    font-weight: 600;
+}
+
+.of-icon {
+    margin-right: 10px;
+}
+
+.countdown-block {
+    margin-top: 16px;
+}
+
+.discount {
+    color: #ff0000;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 400px) {
+    #time-in-current-location {
+        width: 100%;
+        max-width: 330px;
+        font-size: 14px;
+    }
+    .send-button {
+        max-width: 343px;
+    }
+    .header-logo {
+        top: 16px;
+        right: 16px;
+    }
+    .user-info {
+        margin-top: 16px;
+    }
+}
